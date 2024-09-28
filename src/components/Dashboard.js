@@ -22,56 +22,59 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-8 bg-gray-100">
-      <h1 className="text-2xl font-bold mb-6 text-green-700">Welcome to Your Dashboard</h1>
-      <div className="grid grid-cols-2 gap-8">
+    <div className="p-4 sm:p-8 bg-gray-100">
+      <h1 className="text-xl sm:text-2xl font-bold mb-6 text-green-700">
+        Welcome to Your Dashboard
+      </h1>
+      {/* Make it a 1-column grid on small screens, and 2 columns on larger ones */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
         <div
-          className="p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
           onClick={handleRealTimeUpdatesClick}
         >
-          <FaLeaf className="text-3xl text-green-600 mr-4" />
+          <FaLeaf className="text-2xl sm:text-3xl text-green-600 mr-4" />
           <div>
-            <h2 className="text-xl font-semibold">Real-time Updates</h2>
-            <p className="text-gray-600">
+            <h2 className="text-lg sm:text-xl font-semibold">Real-time Updates</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               Get the latest agricultural alerts, weather conditions, and market prices.
             </p>
           </div>
         </div>
 
         <div
-          className="p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
           onClick={handleExpertConsultationsClick}
         >
-          <FaComments className="text-3xl text-green-600 mr-4" />
+          <FaComments className="text-2xl sm:text-3xl text-green-600 mr-4" />
           <div>
-            <h2 className="text-xl font-semibold">Expert Consultations</h2>
-            <p className="text-gray-600">
+            <h2 className="text-lg sm:text-xl font-semibold">Expert Consultations</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               Consult with experts via chat, voice, or video.
             </p>
           </div>
         </div>
 
         <div
-          className="p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
           onClick={handleNotificationsClick}
         >
-          <FaCalendarCheck className="text-3xl text-green-600 mr-4" />
+          <FaCalendarCheck className="text-2xl sm:text-3xl text-green-600 mr-4" />
           <div>
-            <h2 className="text-xl font-semibold">Notifications & Calendar</h2>
-            <p className="text-gray-600">
+            <h2 className="text-lg sm:text-xl font-semibold">Notifications & Calendar</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               Track important dates and add reminders to your calendar.
             </p>
           </div>
         </div>
 
         <div
-          className="p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
           onClick={handleLearningResourcesClick}
         >
-          <FaBookOpen className="text-3xl text-green-600 mr-4" />
+          <FaBookOpen className="text-2xl sm:text-3xl text-green-600 mr-4" />
           <div>
-            <h2 className="text-xl font-semibold">Learning Resources</h2>
-            <p className="text-gray-600">
+            <h2 className="text-lg sm:text-xl font-semibold">Learning Resources</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               Access tutorials on crops, soil, and pest control.
             </p>
           </div>

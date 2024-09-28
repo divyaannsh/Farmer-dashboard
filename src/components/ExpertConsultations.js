@@ -7,6 +7,7 @@ const ExpertConsultations = () => {
       <p className="mb-4 text-gray-600">
         Choose your preferred method of consultation with our agricultural experts.
       </p>
+      {/* Single-column layout for mobile, three-column layout for larger screens */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {/* Chat Option */}
         <div className="p-6 bg-white shadow rounded-lg cursor-pointer hover:shadow-lg transition-shadow">

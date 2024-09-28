@@ -3,8 +3,8 @@ import { FaHome, FaBook, FaHeadset, FaBell, FaUsers } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
-    <div className="w-1/5 bg-green-700 h-screen p-4 text-white">
-      <h1 className="text-3xl font-bold mb-6">Farmer Dashboard</h1>
+    <div className="w-full lg:w-1/5 bg-green-700 h-screen p-4 text-white">
+      <h1 className="text-2xl font-bold mb-6">Farmer Dashboard</h1>
       <nav className="space-y-4">
         <NavItem Icon={FaHome} label="Home" />
         <NavItem Icon={FaBook} label="Learn" />
