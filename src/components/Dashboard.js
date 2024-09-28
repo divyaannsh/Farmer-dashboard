@@ -22,62 +22,65 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-4 sm:p-8 bg-gray-100">
-      <h1 className="text-xl sm:text-2xl font-bold mb-6 text-green-700">
+    <div className="p-4 sm:p-8 bg-gradient-to-r from-green-100 to-green-200 min-h-screen">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-green-800">
         Welcome to Your Dashboard
       </h1>
-      {/* Make it a 1-column grid on small screens, and 2 columns on larger ones */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <div
-          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="relative p-6 bg-white shadow-xl rounded-lg cursor-pointer flex items-center hover:shadow-2xl transition-shadow hover:scale-105 transform duration-300"
           onClick={handleRealTimeUpdatesClick}
         >
-          <FaLeaf className="text-2xl sm:text-3xl text-green-600 mr-4" />
+          <FaLeaf className="text-4xl text-green-600 mr-4" />
           <div>
-            <h2 className="text-lg sm:text-xl font-semibold">Real-time Updates</h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <h2 className="text-xl font-semibold text-green-800">Real-time Updates</h2>
+            <p className="text-gray-600 text-sm">
               Get the latest agricultural alerts, weather conditions, and market prices.
             </p>
           </div>
+          <div className="absolute top-0 right-0 h-full w-full rounded-lg bg-gradient-to-r from-green-400 to-green-600 opacity-10"></div>
         </div>
 
         <div
-          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="relative p-6 bg-white shadow-xl rounded-lg cursor-pointer flex items-center hover:shadow-2xl transition-shadow hover:scale-105 transform duration-300"
           onClick={handleExpertConsultationsClick}
         >
-          <FaComments className="text-2xl sm:text-3xl text-green-600 mr-4" />
+          <FaComments className="text-4xl text-blue-600 mr-4" />
           <div>
-            <h2 className="text-lg sm:text-xl font-semibold">Expert Consultations</h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <h2 className="text-xl font-semibold text-green-800">Expert Consultations</h2>
+            <p className="text-gray-600 text-sm">
               Consult with experts via chat, voice, or video.
             </p>
           </div>
+          <div className="absolute top-0 right-0 h-full w-full rounded-lg bg-gradient-to-r from-blue-400 to-blue-600 opacity-10"></div>
         </div>
 
         <div
-          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="relative p-6 bg-white shadow-xl rounded-lg cursor-pointer flex items-center hover:shadow-2xl transition-shadow hover:scale-105 transform duration-300"
           onClick={handleNotificationsClick}
         >
-          <FaCalendarCheck className="text-2xl sm:text-3xl text-green-600 mr-4" />
+          <FaCalendarCheck className="text-4xl text-yellow-600 mr-4" />
           <div>
-            <h2 className="text-lg sm:text-xl font-semibold">Notifications & Calendar</h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <h2 className="text-xl font-semibold text-green-800">Notifications & Calendar</h2>
+            <p className="text-gray-600 text-sm">
               Track important dates and add reminders to your calendar.
             </p>
           </div>
+          <div className="absolute top-0 right-0 h-full w-full rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-600 opacity-10"></div>
         </div>
 
         <div
-          className="p-4 sm:p-6 bg-white shadow-lg rounded-lg cursor-pointer flex items-center hover:shadow-xl transition-shadow"
+          className="relative p-6 bg-white shadow-xl rounded-lg cursor-pointer flex items-center hover:shadow-2xl transition-shadow hover:scale-105 transform duration-300"
           onClick={handleLearningResourcesClick}
         >
-          <FaBookOpen className="text-2xl sm:text-3xl text-green-600 mr-4" />
+          <FaBookOpen className="text-4xl text-purple-600 mr-4" />
           <div>
-            <h2 className="text-lg sm:text-xl font-semibold">Learning Resources</h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <h2 className="text-xl font-semibold text-green-800">Learning Resources</h2>
+            <p className="text-gray-600 text-sm">
               Access tutorials on crops, soil, and pest control.
             </p>
           </div>
+          <div className="absolute top-0 right-0 h-full w-full rounded-lg bg-gradient-to-r from-purple-400 to-purple-600 opacity-10"></div>
         </div>
       </div>
     </div>
