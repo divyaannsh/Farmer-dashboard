@@ -6,6 +6,8 @@ import RealTimeUpdates from './utils/RealTimeUpdates';
 import LearningResources from './utils/LearningResources';
 import ExpertConsultations from './utils/ExpertConsultations';
 import NotificationsCalendar from './components/NotificationsCalendar';
+import CommunityForum from './utils/CommunityForum' // Import the CommunityForum component
+import MobileAccess from './utils/MobileAccess';
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
             <Route path="/learning-resources" element={<LearningResources />} />
             <Route path="/expert-consultations" element={<ExpertConsultations />} />
             <Route path="/notifications" element={<NotificationsCalendar />} />
+            <Route path="/community-forum" element={<CommunityForum />} /> {/* Add Community Forum Route */}
+            <Route path="/mobile-access" element={<MobileAccess />} />
           </Routes>
         </div>
       </div>

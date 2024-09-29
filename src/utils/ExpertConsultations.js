@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiUser, FiCalendar, FiMapPin } from 'react-icons/fi'; // Import some icons
+import { FiUser, FiCalendar, FiMapPin, FiPhone, FiVideo, FiMessageSquare } from 'react-icons/fi'; // Icons for consultation methods
 
 // Mock data for expert consultations with location details
 const mockConsultations = [
@@ -8,7 +8,7 @@ const mockConsultations = [
     expert: 'Dr. Emily Johnson',
     specialty: 'Crop Science',
     availability: 'Monday to Friday, 10 AM - 4 PM',
-    location: 'Bhiwani', // Add location details
+    location: 'Bhiwani',
   },
   {
     id: 2,
@@ -35,28 +35,55 @@ const mockConsultations = [
 
 const ExpertConsultations = () => {
   return (
-    <div className="p-8 bg-gradient-to-r from-blue-50 to-green-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-8 text-center text-blue-800">Expert Consultations</h1>
-      <div className="space-y-6 max-w-4xl mx-auto">
+    <div className="p-4 md:p-8 bg-gradient-to-r from-blue-50 to-green-50 min-h-screen">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-blue-900">Expert Consultations</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
         {mockConsultations.map((consult) => (
           <div 
             key={consult.id} 
-            className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out"
+            className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out"
           >
-            <div className="flex items-center mb-4">
-              <FiUser className="text-blue-500 text-3xl mr-4" /> {/* Expert icon */}
-              <h2 className="text-2xl font-semibold text-blue-700">{consult.expert}</h2>
+            {/* Expert Info */}
+            <div className="flex items-center mb-6">
+              <FiUser className="text-blue-600 text-3xl md:text-4xl mr-4" /> {/* Expert icon */}
+              <div>
+                <h2 className="text-xl md:text-2xl font-semibold text-blue-800">{consult.expert}</h2>
+                <p className="text-md md:text-lg text-gray-500">{consult.specialty}</p>
+              </div>
             </div>
-            <div className="ml-10 space-y-2">
-              <p className="text-lg text-gray-600 flex items-center">
+
+            {/* Location and Availability Info */}
+            <div className="ml-8 md:ml-12 space-y-2 md:space-y-4">
+              <p className="text-md md:text-lg text-gray-600 flex items-center">
                 <FiMapPin className="mr-2" /> Location: {consult.location}
               </p>
-              <p className="text-lg text-gray-600 flex items-center">
-                <FiCalendar className="mr-2" /> Specialty: {consult.specialty}
-              </p>
-              <p className="text-lg text-gray-600 flex items-center">
+              <p className="text-md md:text-lg text-gray-600 flex items-center">
                 <FiCalendar className="mr-2" /> Availability: {consult.availability}
               </p>
+            </div>
+
+            {/* Consultation Methods */}
+            <div className="mt-6 md:mt-8 flex flex-wrap justify-start md:justify-end space-y-4 space-x-0 sm:space-x-4">
+              <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition">
+                <FiMessageSquare className="text-lg" />
+                <span>Chat Now</span>
+              </button>
+              <button className="bg-gradient-to-r from-green-500 to-green-700 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center space-x-2 hover:bg-green-700 transition">
+                <FiPhone className="text-lg" />
+                <span>Voice Call Now</span>
+              </button>
+              <button className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 md:px-5 md:py-3 rounded-lg flex items-center space-x-2 hover:bg-purple-700 transition">
+                <FiVideo className="text-lg" />
+                <span>Video Call Now</span>
+              </button>
+            </div>
+
+            {/* Schedule a session */}
+            <div className="mt-4 text-left md:text-right">
+              <button className="text-blue-600 flex items-center space-x-2 hover:underline">
+                <FiCalendar className="text-lg" />
+                <span>Schedule a Session</span>
+              </button>
             </div>
           </div>
         ))}
