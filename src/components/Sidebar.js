@@ -19,23 +19,21 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Toggle button for mobile view */}
-      <div
-        className="fixed top-0 left-0 lg:hidden p-4 bg-green-700 text-white z-50 flex justify-between items-center w-full"
-      >
-        <h1 className="text-2xl font-bold">Farmer Dashboard</h1>
-        <button onClick={toggleSidebar}>
-          {isOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
-        </button>
-      </div>
-
-      {/* Sidebar for larger screens and hidden on mobile */}
+      {/* Sidebar for larger screens and mobile view with hamburger */}
       <div
         className={`lg:w-1/5 bg-green-700 h-screen p-4 text-white fixed lg:static top-0 left-0 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 lg:translate-x-0 z-40`}
+        } transition-transform duration-300 lg:translate-x-0 z-50`}
       >
-        <h1 className="text-2xl font-bold mb-6">Farmer Dashboard</h1>
+        {/* Hamburger button inside the sidebar for mobile view */}
+        <div className="lg:hidden flex justify-between items-center mb-4">
+          <button onClick={toggleSidebar}>
+            {isOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+          </button>
+          <h1 className="text-2xl font-bold">Farmer Dashboard</h1>
+        </div>
+
+        {/* Sidebar content */}
         <nav className="space-y-4">
           <NavItem Icon={FaHome} label="Home" onClick={() => handleNavClick('/')} />
           <NavItem Icon={FaBook} label="Learn" onClick={() => handleNavClick('/learning-resources')} />
@@ -48,7 +46,7 @@ const Sidebar = () => {
       {/* Overlay when sidebar is open on mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-30 lg:hidden"
+          className="fixed inset-0 bg-black opacity-50 z-40 lg:hidden"
           onClick={toggleSidebar}
         ></div>
       )}
