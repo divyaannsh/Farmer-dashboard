@@ -12,7 +12,7 @@ const App = () => {
     <Router>
       <div className="flex flex-col h-screen">
         <div className="flex flex-grow">
-          <Sidebar />
+          
           <div className="w-full">
             <Routes>
               <Route path="/" element={<Dashboard />} />

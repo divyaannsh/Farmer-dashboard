@@ -1,37 +1,54 @@
 import React from 'react';
+import { FiCloudRain, FiAlertTriangle, FiTrendingUp, FiDroplet } from 'react-icons/fi'; // Use FiDroplet instead of FiLeaf
 
-// Mock data for real-time updates
-const mockUpdates = [
+// Mock data for agricultural alerts with location details
+const mockAlerts = [
   {
     id: 1,
-    type: 'Weather Alert',
-    description: 'Heavy rains expected in the northern region this weekend.',
+    title: 'Weather Alert: Heavy Rain Expected in Bhiwani',
+    description: 'Expect heavy rainfall in the northern regions, including Bhiwani, which could affect the wheat and corn crops.',
     date: 'September 27, 2024',
+    icon: FiCloudRain, // Assign icons to each alert
   },
   {
     id: 2,
-    type: 'Market Price',
-    description: 'Wheat prices have increased by 5% due to recent demand spikes.',
-    date: 'September 26, 2024',
+    title: 'Pest Control Advisory for Jhajjar',
+    description: 'Increased sightings of locusts in the western regions, particularly in Jhajjar. Farmers are advised to use appropriate pesticides.',
+    date: 'September 25, 2024',
+    icon: FiAlertTriangle,
   },
   {
     id: 3,
-    type: 'Agricultural Alert',
-    description: 'Pest infestation reported in the southern fields, take necessary precautions.',
-    date: 'September 25, 2024',
+    title: 'Market Prices Update: Wheat in Kurukshetra',
+    description: 'Wheat prices have increased by 15% due to global demand. Farmers in Kurukshetra may see higher profits this season.',
+    date: 'September 23, 2024',
+    icon: FiTrendingUp,
+  },
+  {
+    id: 4,
+    title: 'Soil Health Report: Yamunanagar',
+    description: 'Recent soil health assessments in Yamunanagar show improved fertility. Farmers are encouraged to continue soil conservation efforts.',
+    date: 'September 22, 2024',
+    icon: FiDroplet, // Use FiDroplet instead of FiLeaf
   },
 ];
 
 const RealTimeUpdates = () => {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Real-time Updates</h1>
-      <div className="space-y-4">
-        {mockUpdates.map((update) => (
-          <div key={update.id} className="p-4 border rounded-lg shadow">
-            <h2 className="text-xl font-semibold">{update.type}</h2>
-            <p className="text-gray-600">{update.description}</p>
-            <p className="text-sm text-gray-500 mt-2">{update.date}</p>
+    <div className="p-8 bg-gradient-to-r from-green-50 to-blue-50 min-h-screen">
+      <h1 className="text-3xl font-bold mb-8 text-center text-green-800">Agricultural Alerts & Updates</h1>
+      <div className="space-y-6 max-w-4xl mx-auto">
+        {mockAlerts.map((alert) => (
+          <div 
+            key={alert.id} 
+            className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 ease-in-out"
+          >
+            <div className="flex items-center mb-4">
+              <alert.icon className="text-green-500 text-3xl mr-4" /> {/* Use icons dynamically */}
+              <h2 className="text-xl font-semibold text-green-700">{alert.title}</h2>
+            </div>
+            <p className="text-gray-600">{alert.description}</p>
+            <p className="text-sm text-gray-400 mt-4">{alert.date}</p>
           </div>
         ))}
       </div>
