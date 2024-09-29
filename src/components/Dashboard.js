@@ -23,9 +23,10 @@ const Dashboard = () => {
 
   return (
     <div className="p-4 sm:p-8 bg-gradient-to-r from-green-100 to-green-200 min-h-screen">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-green-800">
-        Welcome to Your Dashboard
-      </h1>
+      <h1 className="text-3xl sm:text-4xl font-bold mb-10 mt-8 text-green-800 p-4">
+  Welcome to Your Dashboard
+</h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <div
           className="relative p-6 bg-white shadow-xl rounded-lg cursor-pointer flex items-center hover:shadow-2xl transition-shadow hover:scale-105 transform duration-300"
