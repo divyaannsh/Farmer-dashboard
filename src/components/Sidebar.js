@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaBook, FaHeadset, FaBell, FaUsers, FaBars, FaTimes } from 'react-icons/fa';
+import { FaHome, FaBook, FaHeadset, FaBell, FaUsers, FaBars, FaTimes, FaMapMarkedAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -39,6 +39,7 @@ const Sidebar = () => {
           <NavItem Icon={FaHeadset} label="Consult" onClick={() => handleNavClick('/expert-consultations')} isActive={activePath === '/expert-consultations'} />
           <NavItem Icon={FaBell} label="Updates" onClick={() => handleNavClick('/real-time-updates')} isActive={activePath === '/real-time-updates'} />
           <NavItem Icon={FaUsers} label="Community Forum" onClick={() => handleNavClick('/community-forum')} isActive={activePath === '/community-forum'} />
+          <NavItem Icon={FaMapMarkedAlt} label="Mobile Access" onClick={() => handleNavClick('/mobile-access')} isActive={activePath === '/mobile-access'} />
         </nav>
       </div>
     </>

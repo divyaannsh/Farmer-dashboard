@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaLeaf, FaComments, FaCalendarCheck, FaBookOpen, FaUsers, FaMapMarkedAlt } from 'react-icons/fa'; // Added icons for Community Forum and Mobile Access
+import { FaBell, FaComments, FaCalendarCheck, FaBookOpen, FaUsers, FaMapMarkedAlt } from 'react-icons/fa'; // Updated the import to use FaBell
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -36,12 +36,12 @@ const Dashboard = () => {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {/* Real-time Updates */}
+        {/* Real-time Updates with Bell Icon */}
         <div
           className="relative p-6 bg-white shadow-xl rounded-lg cursor-pointer flex items-center hover:shadow-2xl transition-shadow hover:scale-105 transform duration-300"
           onClick={handleRealTimeUpdatesClick}
         >
-          <FaLeaf className="text-4xl text-green-600 mr-4" />
+          <FaBell className="text-4xl text-green-600 mr-4" /> {/* Replaced FaLeaf with FaBell */}
           <div>
             <h2 className="text-xl font-semibold text-green-800">Real-time Updates</h2>
             <p className="text-gray-600 text-sm">
